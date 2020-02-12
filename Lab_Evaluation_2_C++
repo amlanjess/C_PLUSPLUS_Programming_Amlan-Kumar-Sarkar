@@ -1,0 +1,30 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class Circle {
+public:
+    float r,area;
+
+    Circle(){
+        cout<<"Enter the Radius of a Circle : ";
+        cin>>r;
+        area=3.14*r*r;
+    }
+    void display()
+    {
+        cout<<"\nArea of circle is : "<<area;
+    }
+    friend void Amlan();
+};
+
+void Amlan()
+{
+    Circle obj;
+    obj.display();
+}
+int main()
+{
+    Amlan();
+    return 0;
+}
