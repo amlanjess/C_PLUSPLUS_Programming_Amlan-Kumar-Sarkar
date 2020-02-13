@@ -1,0 +1,86 @@
+1:
+#include<iostream>
+#include<conio.h>
+using namespace std;
+class Amlan
+{
+    int x;
+public:
+    void get(int a)
+    {
+        x=a;
+    }
+    void disp()
+    {
+        cout<<x<<endl;
+    }
+    friend void A();
+};
+
+void A()
+{
+    Amlan OB;
+    OB.x=300;
+    OB.disp();
+}
+int main()
+{
+    A();
+    return 0;
+}
+
+
+2:
+#include<iostream>
+using namespace std;
+
+class Test {
+public:
+    float r, area;
+
+    Test() {
+        cout << "Enter radius of a circle : ";
+        cin >> r;
+
+        area = 3.14 * r * r;
+    }
+
+    void display() {
+        cout << "\nArea of circle is : " << area;
+    }
+};
+
+int main() {
+
+    Test obj;
+
+    obj.display();
+
+    return 0;
+}
+
+
+3:
+#include<iostream.h>
+class Circle
+{
+int r;
+public:
+void input()
+{
+cout<<"Enter Radius:";
+cin>>r;
+}
+friend float area(Circle C);
+};
+float area(Circle C)
+{
+return (3.14*C.r*C.r);
+}
+int main()
+{
+Circle C1;
+C1.input();
+cout<<"Area of Circle is:"<<area(C1);
+return 0;
+}
