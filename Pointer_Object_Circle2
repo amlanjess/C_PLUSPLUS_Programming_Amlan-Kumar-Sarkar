@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+class circle
+{
+private:
+    int radius;
+    float area;
+    void calculation();
+public:
+    void get(int r)
+    {
+        radius=r;
+    }
+    void disp()
+    {
+        calculation();
+        cout<<"Area of Circle is: \n"<<area;
+    }
+};
+void circle::calculation()
+{
+    area=3.14f*radius*radius;
+}
+int main()
+{
+    int rad;
+    cout<<"Enter radius:\n";
+    cin>>rad;
+    circle obj;
+    obj.get(rad);
+    circle *p=&obj;
+    p->disp();
+    return 0;
+}
+
