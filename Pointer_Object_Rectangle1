@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;
+
+class rectangle
+{
+private:
+    int height,width;
+    float area;
+    void calculation()
+    {
+        area=height*width;
+    }
+public:
+    void get(int r,int s)
+    {
+        height=r;
+        width=s;
+    }
+    void disp()
+    {
+        calculation();
+        cout<<"Area of Circle is: \n"<<area;
+    }
+
+};
+int main()
+{
+    int hei,wid;
+    cout<<"Enter height & width:\n";
+    cin>>hei>>wid;
+    rectangle obj;
+    obj.get(hei,wid);
+    rectangle *p=&obj;
+    p->disp();
+    return 0;
+}
+
