@@ -33,16 +33,16 @@ public:
 int main()
 {
     int a,c,d;
-    cout<<"Enter the radius:";
+    cout<<"Enter the radius:\n";
     cin>>a;
     Rectangle OBJ;
     OBJ.get(a);
-    cout<<"Enter sides:";
+    cout<<"\nEnter sides:\n";
     cin>>c>>d;
     OBJ.init(c,d);
-    cout<<"Circle:\n";
+    cout<<"\nCircle:\n";
     OBJ.disp();
-    cout<<"\nRectangle:\n";
+    cout<<"\n\nRectangle:\n";
     OBJ.result();
     return 0;
 }
