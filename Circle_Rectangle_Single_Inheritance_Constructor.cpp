@@ -19,7 +19,7 @@ class Rectangle:public Circle
 {
     int l,b;
 public:
-    Rectangle(int a,int n,int m):Circle(a)
+    Rectangle(int a,int m,int n):Circle(a)
     {
         l=m;
         b=n;
