@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+class parent1
+{
+public:
+    int a;
+    void geta()
+    {
+        cout<<"Enter First Number: "<<endl;
+        cin>>a;
+    }
+};
+
+class parent2
+{
+public:
+    int b;
+    void getb()
+    {
+        cout<<"Enter Second Number: "<<endl;
+        cin>>b;
+    }
+};
+class child:public parent1,public parent2
+{
+public:
+    void display()
+    {
+        cout<<"Average of Two number: "<<(a+b)/2<<endl;
+    }
+};
+
+int main()
+{
+    child obj;
+    obj.geta();
+    obj.getb();
+    obj.display();
+    return 0;
+}
