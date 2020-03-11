@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+
+class Amlan
+{
+    public:
+    int a,b;
+    void geta(int n1,int n2)
+    {
+        cout<<"Enter 1st and 2nd Number: "<<endl;
+        a=n1,b=n2;
+    }
+};
+
+class Amlan1:public Amlan
+{
+public:
+    void multiplication()
+    {
+        cout<<"Multiplication of two number: "<<a*b<<endl;
+    }
+};
+
+class Amlan2:public Amlan
+{
+public:
+    void addition()
+    {
+        cout<<"Addition of two number: "<<a+b<<endl;
+    }
+};
+
+class Amlan3:public Amlan
+{
+public:
+    void subtraction()
+    {
+        cout<<"Subtraction of two number: "<<a-b<<endl;
+    }
+};
+int main()
+{
+    Amlan1 obj1;
+    Amlan2 obj2;
+    Amlan3 obj3;
+    obj1.geta(100,20);
+    obj1.multiplication();
+    obj2.geta(100,20);
+    obj2.addition();
+    obj3.geta(100,20);
+    obj3.subtraction();
+    return 0;
+}
+
