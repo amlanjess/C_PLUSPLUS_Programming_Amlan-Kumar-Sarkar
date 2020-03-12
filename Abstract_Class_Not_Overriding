@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class Base
+{
+public:
+        virtual void show()=0;
+};
+class Derived:public Base
+{
+/*public:
+    void show()
+    {
+        cout<<"Thanks...\n";
+    }*/   //If we don't use it then virtual function not override and cause an error.
+};
+
+int main(void)
+{
+    Derived d;
+    //d.show(); //It is call when pure virtual function is overriding.
+    return 0;
+}
