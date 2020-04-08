@@ -11,7 +11,6 @@ class Amlan
 		{
 			random1=x;
 			random2=y;
-
 		}
 		void show_data()
 		{
@@ -35,9 +34,8 @@ int main()
 	ob1.show_data();
 	cout<<"\nSecond Number is: ";
 	ob2.show_data();
-	ob1=ob2+ob3;
+	ob3=ob1+ob2;
 	cout<<"\nSum of the two number is: ";
-	ob2.show_data();
+	ob3.show_data();
     return 0;
 }
-
