@@ -1,0 +1,43 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+
+class Amlan
+{
+	int random1,random2;
+	public:
+		Amlan(){};
+		Amlan(int x,int y)
+		{
+			random1=x;
+			random2=y;
+
+		}
+		void show_data()
+		{
+			cout<<random1<<"+i"<<random2;
+		}
+		Amlan operator +(Amlan);
+};
+
+Amlan Amlan::operator +(Amlan object)
+{
+	Amlan out;
+	out.random1=random1+object.random1;
+	out.random2=random2+object.random2;
+	return(out);
+}
+
+int main()
+{
+	Amlan ob1(10,20),ob2(20,10),ob3;
+	cout<<"First Number is: ";
+	ob1.show_data();
+	cout<<"\nSecond Number is: ";
+	ob2.show_data();
+	ob1=ob2+ob3;
+	cout<<"\nSum of the two number is: ";
+	ob2.show_data();
+    return 0;
+}
+
