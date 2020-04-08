@@ -1,0 +1,86 @@
+#include<iostream>
+using namespace std;
+
+class Amlan
+{
+    int Reg_no;
+    int Roll_no;
+public:
+    void get_data(int,int);
+    void put_data(void);
+};
+
+void Amlan:: get_data(int Re_no,int Ro_no)
+{
+    Reg_no=Re_no;
+    Roll_no=Ro_no;
+}
+
+void Amlan:: put_data()
+{
+    cout<<"Name: Amlan Kumar Sarkar \n";
+    cout<<"Registration No: "<<Reg_no<<"\n";
+    cout<<"Roll No: "<<Roll_no<<"\n";
+}
+
+class Marks:public Amlan
+{
+protected:
+    float oop;
+    float cad;
+    float ds;
+    float os;
+    float cc;
+public:
+    void get_marks(float,float,float,float,float);
+    void put_marks(void);
+};
+
+void Marks:: get_marks(float a,float b,float c,float d,float e)
+{
+    oop=a;
+    cad=b;
+    ds=c;
+    os=d;
+    cc=e;
+};
+
+void Marks:: put_marks()
+{
+    cout<<"\n";
+    cout<<"Marks in Object Oriented Programming: "<<oop<<"\n";
+    cout<<"Marks in Computer Architecture & Design: "<<cad<<"\n";
+    cout<<"Marks in Data Structure: "<<ds<<"\n";
+    cout<<"Marks in Operating System: "<<os<<"\n";
+    cout<<"Marks in Cloud Computing: "<<cc<<"\n";
+};
+
+class Result:public Marks
+{
+protected:
+    float total;
+    float percentage;
+public:
+    void display(void);
+};
+
+void Result:: display(void)
+{
+    total=oop+cad+ds+os+cc;
+    percentage=total/5;
+    put_data();
+    put_marks();
+    cout<<"\n";
+    cout<<"Total number of 5 subjects: "<<total<<"\n";
+    cout<<"\n";
+    cout<<"Average Fitness Percentage of 5 subjects: "<<percentage<<"\n";
+};
+
+int main()
+{
+    Result random;
+    random.get_data(11900435,1122334455);
+    random.get_marks(75.0,80.0,83.0,70.0,78.0);
+    random.display();
+    return 0;
+}
